@@ -1,7 +1,7 @@
 input = gets.chomp.split.map(&:to_i)
 compare_1, compare_2 = input[-2], input.last
 
-input = input[0..5].combination(3)
+input = input.first(6).combination(3)
 
 pair_1_winner, pair_2_winner = [], []
 
