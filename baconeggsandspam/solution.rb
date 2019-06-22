@@ -2,9 +2,7 @@ while true
 	customers = gets.chomp.to_i
 	hash = {}	
 
-	if customers == 0
-		break
-	end
+	break if customers == 0
 
 	customers.times do |i|
 		input = gets.chomp.split
