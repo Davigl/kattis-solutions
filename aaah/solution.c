@@ -8,11 +8,11 @@ int main() {
     scanf("%s", jon);
     scanf("%s", doctor);
 
-    ret =   strcmp(jon, doctor, 1000);
+    ret = strcmp(jon, doctor, 1000);
 
-    if(ret > 0){
+    if (ret > 0) {
         printf("no");
-    } else if(ret <= 0){
+    } else if (ret <= 0) {
         printf("go");
     }
 }
