@@ -6,12 +6,14 @@ input = input.first(6).combination(3)
 pair_1_winner, pair_2_winner = [], []
 
 input.each do |v|
-	if v.sum == compare_1
-		pair_1_winner << v
+	sum = v.sum
+	
+	if sum.eql? compare_1
+		pair_1_winner.push(v)
 	end
 
-	if v.sum == compare_2
-		pair_2_winner << v
+	if sum.eql? compare_2
+		pair_2_winner.push(v)
 	end
 
 	if pair_1_winner.any? and pair_2_winner.any?
