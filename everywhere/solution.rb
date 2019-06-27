@@ -6,7 +6,7 @@ n.times do |i|
 
   n_cities.times do |j|
     name_city = gets.chomp
-    cities << name_city
+    cities.push(name_city)
   end
 
   puts cities.uniq.size
