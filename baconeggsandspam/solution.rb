@@ -2,7 +2,7 @@ while true
 	customers = gets.chomp.to_i
 	hash = {}	
 
-	break if customers == 0
+	break if customers.eql? 0
 
 	customers.times do |i|
 		input = gets.chomp.split
