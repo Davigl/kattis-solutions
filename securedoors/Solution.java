@@ -2,38 +2,34 @@ import java.util.*;
 
 public class Solution {
     public static void main(String[] args) {
-        Scanner ler = new Scanner(System.in);
+        Scanner read = new Scanner(System.in);
 
-        int qtd;
-	String h;
+        int input = Integer.parseInt(read.nextLine());
 
-        qtd = ler.nextInt();
-        ler.nextLine();
-
-        HashMap<String,Integer> pessoas = new HashMap<>();
+        HashMap<String,Integer> persons = new HashMap<>();
                 
-        for (int i = 0; i < qtd; i ++) {
-            h = ler.nextLine();
+        for (int i = 0; i < input; i ++) {
+            String word = read.nextLine();
             
-            if (!(pessoas.containsKey(h.split(" ")[1]))) {
-                pessoas.put(h.split(" ")[1], 0);
+            if (!(persons.containsKey(word.split(" ")[1]))) {
+                persons.put(word.split(" ")[1], 0);
             }
             
-            if (h.split(" ")[0].equals("entry")) {
-                if (pessoas.get(h.split(" ")[1]) == 0) {
-                    System.out.println(h.split(" ")[1] + " entered");
-                    pessoas.put(h.split(" ")[1], 1);
+            if (word.split(" ")[0].equals("entry")) {
+                if (persons.get(word.split(" ")[1]) == 0) {
+                    System.out.println(word.split(" ")[1] + " entered");
+                    persons.put(word.split(" ")[1], 1);
                 } else {
-                    System.out.println(h.split(" ")[1] + " entered (ANOMALY)");
+                    System.out.println(word.split(" ")[1] + " entered (ANOMALY)");
                 }
             }
             
-            if (h.split(" ")[0].equals("exit")) {
-                if (pessoas.get(h.split(" ")[1]) == 1) {
-                    System.out.println(h.split(" ")[1] + " exited");
-                    pessoas.put(h.split(" ")[1], 0);
+            if (word.split(" ")[0].equals("exit")) {
+                if (persons.get(word.split(" ")[1]) == 1) {
+                    System.out.println(word.split(" ")[1] + " exited");
+                    persons.put(word.split(" ")[1], 0);
                 } else {
-                    System.out.println(h.split(" ")[1] + " exited (ANOMALY)");
+                    System.out.println(word.split(" ")[1] + " exited (ANOMALY)");
                 }
             }
         }
