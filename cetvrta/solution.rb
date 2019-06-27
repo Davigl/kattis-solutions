@@ -1,5 +1,5 @@
 def number_left(ary)
-  ary.each { |v| return v if ary.count(v) == 1 }
+  ary.each { |v| return v if ary.count(v).eql? 1 }
 end
 
 coordinates_1 = gets.chomp.split.map(&:to_i)
