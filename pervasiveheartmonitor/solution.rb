@@ -8,6 +8,5 @@ STDIN.each_line do |line|
     end
 
     output = sum.map(&:to_f).sum / sum.size
-    
     puts "%0.6f #{names.join(" ")}" % [output]
 end
