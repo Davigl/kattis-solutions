@@ -1,23 +1,22 @@
-alfabeto = "ABCDEFGHIJKLMNOPQRSTUVWXYZ_."
+alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ_."
 
 while (True):
-  string = ""
-  string2 = ""
+  word, output = "", ""
   str = input()
   
   if (str == "0"):
     break
   
-  string = str.split(" ")[1]
-  rotacoes = int(str.split(" ")[0])
+  word = str.split(" ")[1]
+  rotations = int(str.split(" ")[0])
 
-  for i in range(len(string)):
-    pos = alfabeto.find(string[i])
-    rotaciona = pos + rotacoes
+  for i in range(len(word)):
+    position = alphabet.find(word[i])
+    rotation = position + rotations
     
-    if (rotaciona > 27):
-       rotaciona -= 28
+    if (rotation > 27):
+       rotation -= 28
     
-    string2 += alfabeto[rotaciona]
+    output += alphabet[rotation]
     
-  print(string2[::-1])
+  print(output[::-1])
