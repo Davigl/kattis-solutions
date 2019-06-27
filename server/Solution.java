@@ -2,22 +2,22 @@ import java.util.*;
 
 public class Solution {
 	public static void main(String[] args) {
-		Scanner ler = new Scanner(System.in);
-		int tarefas,minutos,qtd = 0, t, cont = 0;
+		Scanner read = new Scanner(System.in);
+		int tasks, minutes, quantity = 0, time, count = 0;
 		
-		tarefas = ler.nextInt();
-		minutos = ler.nextInt();
+		tasks = read.nextInt();
+		minutes = read.nextInt();
 		
-		for (int i = 0; i < tarefas; i++) {
-			t = ler.nextInt();
-			if (qtd + t <= minutos) {
-				qtd += t;
-				cont ++;
+		for (int i = 0; i < tasks; i++) {
+			time = read.nextInt();
+			if (quantity + time <= minutes) {
+				quantity += time;
+				count ++;
 			} else {
 				break;
 			}
-		}
+		} 
 		
-		System.out.println(cont);
+		System.out.println(count);
 	}
 }
