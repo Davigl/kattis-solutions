@@ -1,16 +1,13 @@
-palavra = raw_input()
+words = raw_input().split(" ")
+count = 0
 
-palavras = palavra.split(" ")
+for i in range(len(words)):
+	if "ae" in words[i]:
+		count += 1
 
-cont = 0
+percent = len(words) * 0.4
 
-for i in range(len(palavras)):
-	if "ae" in palavras[i]:
-		cont += 1
-
-percent = len(palavras) * 0.4
-
-if (cont >= percent):
+if (count >= percent):
 	print "dae ae ju traeligt va"
 else:
 	print "haer talar vi rikssvenska"
