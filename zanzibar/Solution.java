@@ -10,11 +10,10 @@ public class Solution {
             ArrayList<Integer> store = new ArrayList<>();
             
             int sum = 0, difference = 0;
-            String values = read.nextLine();
-            String aux[] = values.split(" ");
+            String values[] = read.nextLine().split(" ")
         
-            for (int j = 0; j < aux.length; j ++) {
-                store.add(Integer.parseInt(aux[j]));
+            for (int j = 0; j < values.length; j ++) {
+                store.add(Integer.parseInt(values[j]));
             }
             
             store.remove(store.get(store.size() - 1));
