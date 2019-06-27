@@ -2,33 +2,30 @@ import java.util.*;
 
 public class Solution {
     public static void main(String args[]) {
-       Scanner ler = new Scanner(System.in);
+       Scanner read = new Scanner(System.in);
        
-       while(ler.hasNext()) {
-           String numeros = ler.nextLine();
-           String[] array = numeros.split(" ");
+       while(read.hasNext()) {
+           String[] numbers = ler.nextLine().split(" ");
            int winner = 0;
            boolean hasWinner = false;
            
-           for (int i = 0; i < array.length ; i ++) {
-               int vez = Integer.parseInt(array[i]);
+           for (int i = 0; i < numbers.length ; i ++) {
+               int turn = Integer.parseInt(numbers[i]);
                int sum = 0;
-               for (int j = 0 ; j < array.length; j ++) {
+               
+               for (int j = 0 ; j < numbers.length; j ++) {
                    if (j != i) {
-
-                        sum += Integer.parseInt(array[j]);
-                        
+                        sum += Integer.parseInt(numbers[j]);
                    }
                }
                
-               if (sum == vez) {
-                    winner = vez;
+               if (sum == turn) {
+                    winner = turn;
                     break;
                 }
            } 
            
            System.out.println(winner);
        }
-        
     }
 }
