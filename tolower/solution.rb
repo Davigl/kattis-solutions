@@ -1,15 +1,13 @@
-input = gets.chomp.split
-
-x, y = input[0].to_i, input[1].to_i
+x, y = gets.chomp.split.map(&:to_i)
 count = 0
 
 x.times do |i|
 	passed = true
 	y.times do |j|
-		input = gets.chomp
-		input = input[0].downcase << input[1..-1]
+		case = gets.chomp
+		case = case[0].downcase << case[1..-1]
 		
-		unless input.include? (input.downcase)
+		unless case.include? (case.downcase)
 			passed = false
 		end
 	end
