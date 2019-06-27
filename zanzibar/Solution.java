@@ -6,26 +6,27 @@ public class Solution {
         
         int cases = Integer.parseInt(ler.nextLine());
         
-        for (int i=0; i<cases;i++) {    
-            int soma = 0, diferenca = 0;
-            ArrayList<Integer> array = new ArrayList<>();
+        for (int i = 0; i < cases; i ++) {    
+            ArrayList<Integer> store = new ArrayList<>();
+            
+            int sum = 0, difference = 0;
             String values = ler.nextLine();
             String aux[] = values.split(" ");
         
             for (int j = 0; j < aux.length; j ++) {
-                array.add(Integer.parseInt(aux[j]));
+                store.add(Integer.parseInt(aux[j]));
             }
             
-            array.remove(array.get(array.size()-1));
+            store.remove(store.get(store.size() - 1));
             
-            for (int j = 0; j < array.size()-1; j ++) {
-                if (array.get(j)*2 < array.get(j+1)){
-                    diferenca = array.get(j+1) - array.get(j)*2;
-                    soma += diferenca;
+            for (int j = 0; j < store.size() - 1; j ++) {
+                if (store.get(j) * 2 < store.get(j + 1)){
+                    difference = store.get(j + 1) - store.get(j) * 2;
+                    sum += difference;
                 }
             }
             
-            System.out.println(soma);
+            System.out.println(sum);
         }
     }
 }
