@@ -1,4 +1,4 @@
-n = gets.chomp.to_i
+cases = gets.chomp.to_i
 input = gets.chomp.split
 count = 0
 
