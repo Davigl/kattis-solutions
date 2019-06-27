@@ -7,7 +7,7 @@ while true
 	customers.times do |i|
 		input = gets.chomp.split
 		
-		input[1..-1].each { |c| hash.key?(c.to_sym) ? hash[c.to_sym] << input[0] : hash[c.to_sym] = [input[0]] }
+		input[1..-1].each { |c| hash.key?(c.to_sym) ? hash[c.to_sym] << input.first : hash[c.to_sym] = input.first }
 	end
 
 	hash2 = Hash[ hash.sort_by { |key, val| key.to_s } ]
