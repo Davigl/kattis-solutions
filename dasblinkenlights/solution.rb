@@ -1,18 +1,18 @@
-entrada = gets.chomp.split.map(&:to_i)
-sum, sum2 = [], []
-temp, temp2 = entrada[0], entrada[1]
+input = gets.chomp.split.map(&:to_i)
+sum, sum_2 = [], []
+temp, temp_2 = input.first, input[1]
 flag = false
 
-while temp <= entrada[2]
-	sum << temp
-	temp += entrada[0]
+while temp <= input[2]
+	sum.push(temp)
+	temp += input.first
 end
 
-while temp2 <= entrada[2]
-	sum2 << temp2
-	temp2 += entrada[1]
+while temp_2 <= input[2]
+	sum_2.push(temp_2)
+	temp_2 += input[1]
 end
 
-sum.length > sum2.length ? sum.each {|c| flag = true if sum2.include?(c) } : sum2.each {|c| flag = true if sum.include?(c) }
+sum.length > sum_2.length ? sum.each {|c| flag = true if sum_2.include?(c) } : sum_2.each {|c| flag = true if sum.include?(c) }
 	
 puts flag ? "yes" : "no"
