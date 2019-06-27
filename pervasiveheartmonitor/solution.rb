@@ -1,11 +1,10 @@
 STDIN.each_line do |line|
     values = line.split
-    names = []
-    sum = []
+    names, sum = [], []
     output = 0
 
     values.each do |value|
-      value.downcase.match?("[a-z]") ? names << value : sum << value
+      value.downcase.match?("[a-z]") ? names.push(value) : sum.push(value)
     end
 
     output = sum.map(&:to_f).sum / sum.size
