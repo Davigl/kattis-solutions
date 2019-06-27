@@ -1,9 +1,10 @@
-x = gets.chomp.split.map(&:to_i)
+input = gets.chomp.split.map(&:to_i)
+x, y = input[0], input[1]
 
-if x[0] == 0 and x[1] == 0
+if x.eql? 0 and y.eql? 0
   puts "Not a moose"
-elsif x[0] == x[1]
-  puts "Even #{x[0] + x[1]}"
+elsif x.eql? y
+  puts "Even #{x + y}"
 else
-  puts "Odd #{2* x.max }"
+  puts "Odd #{2* input.max }"
 end
