@@ -2,9 +2,9 @@ import java.util.*;
 
 public class Solution {
     public static void main(String[] args) {
-        Scanner ler = new Scanner(System.in);
+        Scanner read = new Scanner(System.in);
 
-        int input = Integer.parseInt(ler.nextLine());
+        int input = Integer.parseInt(read.nextLine());
         int count, bigger;
         String binary, number, temporary;
         
@@ -12,7 +12,7 @@ public class Solution {
             bigger = 0;
             count = 0;
             temporary = "";
-            num = ler.nextLine();
+            num = read.nextLine();
             
             for (int j = 0; j < num.length(); j++) {
                 temporary += num.charAt(j);
