@@ -7,11 +7,7 @@ for i in 2..(input/2) + 1
   x = i
   y = i - 1
 
-  if ((check - x) % (x + y)) == 0
-    puts "#{x},#{y}"
-  end
-
-   if ((check) % (x + y)) == 0
+  if ((check - x) % (x + y)) == 0 or ((check) % (x + y)) == 0
     puts "#{x},#{y}"
   end
 
