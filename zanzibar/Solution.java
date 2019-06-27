@@ -2,15 +2,15 @@ import java.util.*;
 
 public class Solution {
     public static void main(String args[]) {
-        Scanner ler = new Scanner(System.in);
+        Scanner read = new Scanner(System.in);
         
-        int cases = Integer.parseInt(ler.nextLine());
+        int cases = Integer.parseInt(read.nextLine());
         
         for (int i = 0; i < cases; i ++) {    
             ArrayList<Integer> store = new ArrayList<>();
             
             int sum = 0, difference = 0;
-            String values = ler.nextLine();
+            String values = read.nextLine();
             String aux[] = values.split(" ");
         
             for (int j = 0; j < aux.length; j ++) {
