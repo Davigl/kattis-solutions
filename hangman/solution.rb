@@ -4,16 +4,10 @@ lives = 10
 discovered = []
 
 letters.chars.each do |c|
-	if discovered.join == word
-		puts "WIN"
-		break
-	elsif lives == 0
-		puts "LOSE"
-		break
-	end
+	discovered.join.eql?(word) ? (puts "WIN"; break) : (puts "LOSE"; break) if lives.eql? 0
 	
 	if word.include?(c)
-		ocurrences = (0 ... word.length).find_all { |i| word[i,1] == c }
+		ocurrences = (0 ... word.length).find_all { |i| word[i,1].eql? c }
 		ocurrences.each { |c| discovered[c] = word[c] if discovered[c].nil? }
 	else
 		lives -= 1
