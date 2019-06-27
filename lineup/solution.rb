@@ -1,7 +1,7 @@
-x = gets.chomp.to_i
+cases = gets.chomp.to_i
 words = []
 
-x.times do |i|
+cases.times do |i|
   words << gets.chomp
 end
 
