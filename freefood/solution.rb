@@ -1,12 +1,12 @@
 events = gets.chomp.to_i
-days_done = []
+done_days = []
 last_day = 0
 
 events.times do |i|
   days = gets.chomp.split.map(&:to_i)
-  interval =* (days[0]..days[1])
+  interval =* (days.first..days[1])
 
-  days_done =* interval + days_done
+  done_days =* interval + done_days
 end
 
-puts days_done.uniq.length
+puts done_days.uniq.length
