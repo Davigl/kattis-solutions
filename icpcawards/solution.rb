@@ -4,8 +4,8 @@ winners = {}
 number_teams.times do |i|
 	input = gets.chomp.split
 	
-	if winners[input[0].to_sym].nil? and winners.length < 12
-		winners[input[0].to_sym] = input.join(" ")
+	if winners[input.first.to_sym].nil? and winners.length < 12
+		winners[input.first.to_sym] = input.join(" ")
 	end
 end
 
