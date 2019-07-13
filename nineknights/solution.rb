@@ -71,9 +71,7 @@ values.each_with_index do |line, j|
   end
 end
 
-if count_k < 9 or count_k > 9
-  flag = true
-end
+flag = true if count_k < 9 or count_k > 9
 
 puts flag ? "invalid" : "valid"
   
