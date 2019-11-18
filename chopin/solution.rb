@@ -6,14 +6,14 @@ STDIN.each_line do |line|
     input = line.split
     
     note = input.first
-    note = note.gsub("#", "q")
+    note = note.gsub("#", "q").to_sym
     
-    if scale.has_key? (note.to_sym) or scale_2.has_key? (note.to_sym)
-        if scale.has_key? (note.to_sym)
-            output = scale[note.to_sym].gsub("q", "#")
+    if scale.has_key? (note) or scale_2.has_key? (note)
+        if scale.has_key? (note)
+            output = scale[note].gsub("q", "#")
             puts "Case #{count}: #{output} #{input[1]}"
         else
-            output = scale_2[note.to_sym].gsub("q", "#")
+            output = scale_2[note].gsub("q", "#")
             puts "Case #{count}: #{output} #{input[1]}"
         end
     else
